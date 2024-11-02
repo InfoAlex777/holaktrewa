@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quienes Somos - Instituto Franklin Delano Roosevelt</title>
+    <link rel="stylesheet" href="stylesquienessomos.css">
+</head>
+
+<body>
+    <header>
+        <h1>Instituto Franklin Delano Roosevelt</h1>
+        <nav>
+            <div class="menu-toggle">☰</div> <!-- Botón de menú para móviles -->
+            <ul class="nav-links">
+                <li><a href="index.html">Bienvenidos</a></li>
+                <li><a href="bienvenidos.html">Inicio</a></li>
+                <li><a href="ofertas-academicas.html">Ofertas Académicas</a></li>
+                <li class="selected"><a href="quienes-somos.html">Quiénes Somos</a></li>
+                <li><a href="promocion2024.html">Promoción 2024</a></li>
+                <li><a href="instalaciones.html">Instalaciones</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2 style="text-align: center;">Quiénes Somos</h2>
+            <p style="text-align: center;">
+                Somos una institución comprometida con la excelencia académica y el desarrollo integral de nuestros
+                estudiantes.
+            </p>
+
+            <!-- Más contenido aquí -->
+
+            <h2 style="text-align: center;">Formulario de Contacto</h2>
+            <form class="contact-form" method="post" action="mailto:alexmejia.10.fdr@gmail.com" enctype="text/plain" style="border: 2px solid #333; padding: 20px; border-radius: 8px;">
+                <div class="floating-label">
+                    <input type="text" id="nombre" name="nombre" placeholder=" " required>
+                    <label for="nombre">Nombre Completo</label>
+                </div>
+
+                <div class="floating-label">
+                    <input type="email" id="email" name="email" placeholder=" " required>
+                    <label for="email">Correo Electrónico</label>
+                </div>
+
+                <div class="floating-label">
+                    <textarea id="mensaje" name="mensaje" placeholder=" " required></textarea>
+                    <label for="mensaje">Tu Mensaje</label>
+                </div>
+
+                <button type="submit" class="submit-button">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Instituto Franklin Delano Roosevelt - Puerto Cortés, Honduras</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    
+        // Ocultar el menú cuando se hace clic fuera del panel
+        document.addEventListener('click', (event) => {
+            const navLinks = document.querySelector('.nav-links');
+            const menuToggle = document.querySelector('.menu-toggle');
+    
+            // Verificar si el clic fue fuera del panel y del botón del menú
+            if (!navLinks.contains(event.target) && !menuToggle.contains(event.target)) {
+                navLinks.classList.remove('active');
+            }
+        });
+    </script>
+
+    <!-- Script para el menú hamburguesa -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            if (menuToggle && navLinks) {
+                menuToggle.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofertas Académicas - Instituto Franklin Delano Roosevelt</title>
+    <link rel="stylesheet" href="stylesofertas.css">
+    <style>
+        /* Estilos adicionales para centrar el título de la tarjeta */
+        .titulo-centro {
+            text-align: center;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Instituto Franklin Delano Roosevelt</h1>
+        <nav>
+            <div class="menu-toggle">☰</div> <!-- Botón de menú para móviles -->
+            <ul class="nav-links">
+                <li><a href="index.html">Bienvenidos</a></li>
+                <li><a href="bienvenidos.html">Inicio</a></li>
+                <li class="selected"><a href="ofertas-academicas.html">Ofertas Académicas</a></li>
+                <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+                <li><a href="promocion2024.html">Promoción 2024</a></li>
+                <li><a href="instalaciones.html">Instalaciones</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="tarjetas">
+            <div class="tarjeta tarjeta-ancha">
+                <h2 class="titulo-centro">Nuestras instalaciones</h2>
+                <p>Nuestras instalaciones en el Instituto Franklin Delano Roosevelt, ubicadas en Puerto Cortés, Honduras, están diseñadas para proporcionar un ambiente de aprendizaje moderno y acogedor. Contamos con espacios amplios y bien equipados que facilitan el desarrollo académico y personal de nuestros estudiantes. Cada edificio está destinado a diferentes áreas de estudio, promoviendo así una educación integral que abarca tanto lo académico como lo extracurricular.</p>
+            </div>
+        </section>
+
+        <!-- Carrera de Bachillerato Técnico Profesional en Informática -->
+        <section class="tarjetas">
+            <div class="tarjeta tarjeta-ancha">
+                <h2 class="titulo-centro">Algunas Instalaciones</h2>
+                <div style="text-align: center;">
+                </div>
+                </div>
+        </section>
+        
+        <div class="tarjetas">
+            <!-- Carrera de Bachillerato en Ciencias y Humanidades -->
+            <div class="tarjeta">
+                <img src="campo.jpg" alt="Edificio A" width="350" height="200">
+                <strong>Edificio A:</strong>
+                <p>Edificio A: Alberga la administración y aulas de informática, donde se imparten clases de tecnología y herramientas digitales esenciales para el aprendizaje contemporáneo.</p>
+            </div>
+
+            <!-- Carrera de Bachillerato Técnico Profesional en Informática -->
+            <div class="tarjeta">
+                <img src="campo.jpg" alt="Bachillerato Técnico Profesional en Informática" width="350" height="200">
+                <strong>Edificio B:</strong>
+                <p>Edificio B: Aquí se encuentran los maestros del ciclo básico, quienes se dedican a brindar una educación de calidad en diversas materias fundamentales.</p>
+            </div>
+
+            <!-- Carrera de Bachillerato en Hotelería y Turismo -->
+            <div class="tarjeta">
+                <img src="poiuyt.jpg" alt="Bachillerato en Hotelería y Turismo" width="350" height="200">
+                <strong>Edificio C:</strong>
+                <p>Edificio C: Dedicado a la educación artística y tecnología textil, proporcionando un espacio creativo para que los estudiantes exploren su talento y habilidades manuales.</p>
+            </div>
+
+            <!-- Carrera de Bachillerato Técnico Profesional en Administración de Empresas -->
+            <div class="tarjeta">
+                <img src="pñlkjhgfd.jpg" alt="Bachillerato Técnico Profesional en Administración de Empresas" width="350" height="200">
+                <strong>Edificio D:</strong>
+                <p>Edificio D: Destinado a ciencias naturales, donde los estudiantes pueden experimentar y aprender sobre biología, química y física en un ambiente práctico.</p>
+            </div>
+
+            <!-- Carrera de Bachillerato Técnico Profesional en Informática con Robótica -->
+            <div class="tarjeta">
+                <img src="robotica.jpg" alt="Bachillerato Técnico Profesional en Informática con Robótica" width="350" height="200">
+                <strong>Biblioteca:</strong>
+                <p>Biblioteca: Fundamental para el aprendizaje, ofrece una amplia colección de libros y recursos digitales, así como un espacio para el estudio y la investigación.</p>
+            </div>
+
+            <!-- Carrera de Bachillerato Técnico Profesional en Informática con Robótica -->
+            <div class="tarjeta">
+                <img src="maritimo.jpg" alt="Bachillerato Técnico Profesional en Informática con Robótica" width="350" height="200">
+                <strong>Campo:</strong>
+                <p>Campo: Esencial para la práctica deportiva, fomenta el trabajo en equipo y la disciplina, siendo un lugar clave para las actividades extracurriculares del instituto.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Instituto Franklin Delano Roosevelt - Puerto Cortés, Honduras</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    
+        // Ocultar el menú cuando se hace clic fuera del panel
+        document.addEventListener('click', (event) => {
+            const navLinks = document.querySelector('.nav-links');
+            const menuToggle = document.querySelector('.menu-toggle');
+    
+            // Verificar si el clic fue fuera del panel y del botón del menú
+            if (!navLinks.contains(event.target) && !menuToggle.contains(event.target)) {
+                navLinks.classList.remove('active');
+            }
+        });
+    </script>
+
+    <!-- Script para el menú hamburguesa -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            if (menuToggle && navLinks) {
+                menuToggle.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
